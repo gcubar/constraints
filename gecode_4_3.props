@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <GECODE>d:\libraries\gecode_msvc\</GECODE>
+    <GECODE_INCLUDE>$(GECODE)\include</GECODE_INCLUDE>
+    <GECODE_LIB>$(GECODE)\lib</GECODE_LIB>
+    <GECODE_BIN>$(GECODE)\bin</GECODE_BIN>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(GECODE_INCLUDE);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(GECODE_LIB);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="GECODE">
+      <Value>$(GECODE)</Value>
+    </BuildMacro>
+    <BuildMacro Include="GECODE_INCLUDE">
+      <Value>$(GECODE_INCLUDE)</Value>
+    </BuildMacro>
+    <BuildMacro Include="GECODE_LIB">
+      <Value>$(GECODE_LIB)</Value>
+    </BuildMacro>
+    <BuildMacro Include="GECODE_BIN">
+      <Value>$(GECODE_BIN)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
